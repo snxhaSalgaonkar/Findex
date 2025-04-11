@@ -22,10 +22,10 @@ To claim a lost item, the user must go through a verification process. This proc
 Only if the answers match the previously recorded data will the item be released to the person claiming to be the owner hence resulting in filtering out the false claimants
 
 ***Tech Involved***
-Design: Figma
-Frontend: Flutter
-Backend: Firebase 
-Database: Firestore
-API: Gemini API 
-Other tools: VS code, Android Studio
+1. Design: Figma
+2. Frontend: Flutter
+3. Backend: Firebase 
+4. Database: Firestore
+5. API: Gemini API 
+6. Other tools: VS code, Android Studio
 
