@@ -1,7 +1,7 @@
 # FINDEX
-Findex is a digital lost-and-found platform where users can report lost or found items, categorized by location, date, and item type. The system will allow individuals to register missing belongings and receive updates if a matching item is found.
+Findex is a digital lost-and-found platform where users can report lost or found items, categorized by location, date, and item type. The system will allow individuals to register missing belongings and receive updates if a matching item is found......
 
-Team name: **Bitstrom**
+Team name: **Bitstorm**
 
 Team Members: 
 1. Sneha Salgaonkar
