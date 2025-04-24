@@ -19,7 +19,7 @@ What we intend is to increase the accurately and efficiency in the item recovery
 ***Our Approuch/ How we plan to solve it:***
 The objective of our project is to develop a smart system for identifying and returning lost items to their rightful owners.
 To claim a lost item, the user must go through a verification process. This process includes a series of multiple-choice questions (MCQs) related to the unique characteristics of the item—details that only the true owner is likely to know. For example, questions might include the color, brand, custom marks, time and location where it was lost, or accessories associated with the item.
-Only if the answers match the previously recorded data will the item be released to the person claiming to be the owner hence resulting in filtering out the false claimants
+Only if the answers match the previously recorded data will the item be released to the person claiming to be the owner hence resulting in filtering out the false claimants..
 
 ***Tech Involved***
 1. Design: Figma
