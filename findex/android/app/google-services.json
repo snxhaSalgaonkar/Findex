@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "724404965241",
+    "project_id": "findex-295aa",
+    "storage_bucket": "findex-295aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724404965241:android:0fa22f13cbab57478869a8",
+        "android_client_info": {
+          "package_name": "com.example.findex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmNXVnOFZDtQ6Pv04oA0rr7KXyjCNnC68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
