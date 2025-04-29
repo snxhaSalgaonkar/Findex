@@ -1,3 +1,4 @@
+import 'package:findex/found/uploadImage.dart';
 import 'package:flutter/material.dart';
 
 //home screen
@@ -18,7 +19,14 @@ class _HomeState extends State<Home> {
         children: [
           Center(
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => UploadimageofFoundobject(),
+                  ),
+                );
+              },
               child: Icon(Icons.star),
             ),
           ),
