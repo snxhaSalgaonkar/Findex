@@ -1,3 +1,4 @@
+import 'package:findex/found/confirmdesc.dart';
 import 'package:flutter/material.dart';
 
 class UploadImageScreen extends StatefulWidget {
@@ -19,11 +20,12 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
     'Other',
   ];
 
-  Future<void> _addImage() async {
+  Future<void> _addImage() {
+    print('Upload image ');
     // Implement image adding logic here
-    setState(() {
-      _imagePath = 'assets/placeholder_image.png'; // Placeholder
-    });
+    // setState(() {
+    //   _imagePath = 'assets/placeholder_image.png'; // Placeholder
+    // });
   }
 
   Future<void> _askGeminiForDescription() async {
@@ -42,15 +44,21 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
   }
 
   void _submitApplication() {
-    // Implement submit application logic here
-    if (_selectedLostItemType != null) {
-      print('Submitting application for: $_selectedLostItemType');
-      // Include _selectedLostItemType in your submission data
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please select the type of item lost.')),
-      );
-    }
+    print('navigated to next page');
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Confirmdesc()),
+    );
+
+    // // Implement submit application logic here
+    // if (_selectedLostItemType != null) {
+    //   print('Submitting application for: $_selectedLostItemType');
+    //   // Include _selectedLostItemType in your submission data
+    // } else {
+    //   ScaffoldMessenger.of(context).showSnackBar(
+    //     SnackBar(content: Text('Please select the type of item lost.')),
+    //   );
+    // }
   }
 
   @override
@@ -64,19 +72,22 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
         // Added SingleChildScrollView for better layout on smaller screens
         padding: EdgeInsets.all(16.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             // App Logo
-            Container(
-              alignment: Alignment.topRight,
-              margin: EdgeInsets.only(bottom: 20.0),
+            Center(
               child: Container(
-                padding: EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(5.0),
+                //alignment: Alignment.topRight,
+                margin: EdgeInsets.only(bottom: 20.0),
+                child: Container(
+                  padding: EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  child: Text('App logo', style: TextStyle(fontSize: 16.0)),
                 ),
-                child: Text('App logo', style: TextStyle(fontSize: 16.0)),
               ),
             ),
 
@@ -102,35 +113,47 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
                   setState(() {
                     _selectedLostItemType = newValue;
                   });
+                  print('item Type selected $_selectedLostItemType');
                 },
               ),
             ),
             SizedBox(height: 16.0),
 
-            // Add receipt / item image
-            GestureDetector(
-              onTap: _addImage,
-              child: Container(
-                height: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.grey[400],
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Add receipt / item image:',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(width: 8.0),
-                      Icon(Icons.add, color: Colors.white),
-                    ],
-                  ),
-                ),
+            Container(
+              height: 100,
+              width: 100,
+              child: ElevatedButton(
+                onPressed: () {
+                  _addImage();
+                },
+                child: Text("Upload image"),
               ),
             ),
+
+            // Add receipt / item image
+            // GestureDetector(
+            //   onTap: _addImage,
+            //   child: Container(
+            //     height: 80.0,
+            //     decoration: BoxDecoration(
+            //       color: Colors.grey[400],
+            //       borderRadius: BorderRadius.circular(5.0),
+            //     ),
+            //     child: Center(
+            //       child: Row(
+            //         mainAxisAlignment: MainAxisAlignment.center,
+            //         children: <Widget>[
+            //           Text(
+            //             'Add receipt / item image:',
+            //             style: TextStyle(color: Colors.white),
+            //           ),
+            //           SizedBox(width: 8.0),
+            //           Icon(Icons.add, color: Colors.white),
+            //         ],
+            //       ),
+            //     ),
+            //   ),
+            // ),
             SizedBox(height: 16.0),
 
             // Ask Gemini for description
