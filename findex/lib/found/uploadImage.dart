@@ -20,7 +20,7 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
     'Other',
   ];
 
-  Future<void> _addImage() {
+  _addImage() {
     print('Upload image ');
     // Implement image adding logic here
     // setState(() {
