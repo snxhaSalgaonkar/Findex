@@ -1,10 +1,16 @@
+import 'package:findex/found/uploadImage2.dart';
 import 'package:findex/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-void main() async {
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+// void main() async {
+//   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+//   runApp(const MyApp());
+// }
+
+void main() {
+  //await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -19,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: "Findex"),
+      home: Uploadimage2(),
     );
   }
 }
