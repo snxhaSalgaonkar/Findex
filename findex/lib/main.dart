@@ -1,3 +1,5 @@
+import 'package:findex/control/button.dart';
+import 'package:findex/control/lostorfound.dart';
 import 'package:findex/found/uploadImage.dart';
 import 'package:findex/found/uploadImage2.dart';
 import 'package:findex/home.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Uploadimageoflostobject(),
+      home: buttonNavigationBar(),
     );
   }
 }

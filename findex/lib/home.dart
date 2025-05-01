@@ -1,5 +1,5 @@
 import 'package:findex/found/uploadImage.dart';
-import 'package:findex/found/uploadImage2.dart';
+// import 'package:findex/found/uploadImage2.dart';
 import 'package:flutter/material.dart';
 
 //home screen
@@ -21,10 +21,11 @@ class _HomeState extends State<Home> {
           Center(
             child: FloatingActionButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Uploadimage2()),
-                );
+                print('Welcome to findex');
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => Uploadimage2()),
+                // );
               },
               child: Icon(Icons.star),
             ),
